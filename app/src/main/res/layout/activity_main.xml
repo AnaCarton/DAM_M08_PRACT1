@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7F4EE"
+    >
+
+    <Spinner
+        android:id="@+id/spinnerOrigen"
+        android:layout_width="306dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:minHeight="48dp"
+        android:outlineAmbientShadowColor="@color/material_dynamic_primary40"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOrige"
+        android:background="@android:drawable/btn_dropdown"/>
+
+
+    <Spinner
+        android:id="@+id/spinnerDestino"
+        android:layout_width="306dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="24dp"
+        android:minHeight="48dp"
+        android:outlineAmbientShadowColor="@color/material_dynamic_primary40"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDestino"
+        android:background="@android:drawable/btn_dropdown"/>
+
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Conversor de Unidades"
+        android:textColor="#6277ED"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#336A16"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="22dp"
+        android:text="Convertir"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/convertedValues"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valorIntroducido" />
+
+    <EditText
+        android:id="@+id/valorIntroducido"
+        android:layout_width="171dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_style"
+        android:backgroundTint="#F5F5DE"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="20"
+        android:minHeight="48dp"
+        android:padding="15dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewValorIntroducido" />
+
+    <TextView
+        android:id="@+id/textViewValorIntroducido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="240dp"
+        android:text="Valor a convertir"
+        android:textColor="#673AB7"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/valorIntroducido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewOrige"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="60dp"
+        android:text="Unidad de Origen"
+        android:textColor="#673AB7"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="150dp"
+        android:text="Unidad de Destino"
+        android:textColor="#673AB7"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/convertedValues"
+        android:layout_width="215dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_style"
+        android:fontFamily="sans-serif-medium"
+        android:text="Resultado Conversión:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:backgroundTint="#97F68B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConvert" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
